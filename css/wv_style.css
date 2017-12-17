@@ -2246,9 +2246,10 @@ a:hover {
 	margin-left: auto;
 	margin-right: auto;
 }
-.learning-image-angel .title{
-	font-size: 1.25rem;
+.learning-image p{
+	font-size: 1rem;
 	text-align: center;
+	font-weight: 600;
 }
 
 /***********************************
