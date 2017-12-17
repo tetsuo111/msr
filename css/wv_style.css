@@ -1,21 +1,3 @@
-Skip to content
-This repository
-Search
-Pull requests
-Issues
-Marketplace
-Explore
- @tetsuo111
- Sign out
- Unwatch 1
-  Star 0  Fork 0 tetsuo111/msr_learning
- Code  Issues 0  Pull requests 0  Projects 0  Wiki  Insights  Settings
-Branch: master Find file Copy pathmsr_learning/css/wv_style.css
-eb0175e  8 hours ago
-@tetsuo111 tetsuo111 hello2
-1 contributor
-RawBlameHistory     
-Executable File  2191 lines (2115 sloc)  52.2 KB
 @charset "UTF-8";
 /*******************************************************************************
  * ■記述方針
@@ -2097,13 +2079,8 @@ a:hover {
 .learning{
 	position: relative;
 }
-
-.learning-small {}
-.learning-medium {}
-.learning-large { }
-
 /*bulmaのhero調節*/
-.hero.learning-small .hero-body{
+.hero.learning .hero-body{
 	padding-bottom: 1rem;
 	padding-top: 1rem;
 }
@@ -2117,20 +2094,6 @@ a:hover {
 }
 .learning-image-small {
 	padding: 5rem;
-}
-
-/* 命名は -s -m -lでは？ */
-.learning-frame-small{
-	padding: 1.25rem 0.5rem;
-	max-height: 210px;
-}
-.learning-frame-medium {
-	padding: 1.5rem 0.5rem;
-	height: 210px;
-}
-.learning-frame-large {
-	padding: 2rem 0.5rem;
-	height: 400px;
 }
 
 .learning-border1 { border: 7px double black }
@@ -2147,7 +2110,6 @@ a:hover {
 	border-bottom: 2px solid white;
 	margin-right: 1rem;
 }
-
 .learning-head-right:before{
 	content: "";
 	background-image: url(../img/learning/wing.png);
@@ -2156,10 +2118,51 @@ a:hover {
 	background-size: 20px;
 	padding: 0.75rem 0.625rem;
 }
-
 .learning-head-link{
 	display: block;
 	width: 100%;
+	font-size: 0.75rem;
+	text-align: center;
+	color: white;
+}
+
+.learning-body-small{
+	padding: 1rem 0.5rem;
+	max-height: 210px;
+}
+.learning-body-small .learning-item-link span{
+	font-size: 1rem;
+}
+.learning-body-small-detail{
+	font-size: 1rem;
+}
+.learning-body-small-author{
+	font-size: 0.9rem;
+	text-align: center;
+}
+
+.learning-body-medium {
+	padding: 0.75rem 0.5rem;
+	height: 210px;
+	font-size: 1.1rem;
+	line-height: 1.5rem;
+}
+.learning-body-medium .learning-item-link{
+	font-size: 0.75rem;
+	text-align: center;
+}
+.learning-body-medium-detail{
+	line-height: 1rem;
+	font-size: 1rem;
+}
+.learning-body-medium-detail .learning-item-link{
+	text-align: center;
+	font-size: 0.75rem;
+}
+
+.learning-body-large {
+	padding: 2rem 0.5rem;
+	height: 430px;
 }
 
 .learning-item-link {
@@ -2169,9 +2172,15 @@ a:hover {
 	background-size: 20px;
 	border-radius: 10px;
 	cursor: pointer;
-	margin-right: 1.75rem;
-	margin-left : 1.75rem;
-	padding: 0.3rem 1rem 0.425rem 1rem;
+	margin-left: .5rem;
+	margin-right: .5rem;
+	padding: 0.4rem 1rem 0.5rem 1rem;
+	font-weight: 600;
+}
+.learning-item-link span{
+	text-align: center;
+	font-weight: 600;
+	color: black;
 }
 
 .learning-item-link2 {
@@ -2181,9 +2190,9 @@ a:hover {
 	background-size: 20px;
 	border-radius: 10px;
 	cursor: pointer;
-	margin-right: 1.75rem;
-	margin-left : 1.75rem;
-	padding: 0.3rem 1rem 0.425rem 1rem;
+	padding: 0.4rem 1rem 0.5rem 1rem;
+	margin-left: .5rem;
+	margin-right: .5rem;
 }
 
 /*要修正*/
@@ -2232,10 +2241,14 @@ a:hover {
 }
 
 .learning-image-angel{
-    height: 50%;
-    width: 40%;
-    margin-left: auto;
-    margin-right: auto;
+	height: 50%;
+	width: 40%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.learning-image-angel .title{
+	font-size: 1.25rem;
+	text-align: center;
 }
 
 /***********************************
@@ -2251,6 +2264,11 @@ sat31,33,40(titleの改行をどうするか。)修正
  *################################################*/
 .manual-bg-color1 { background-color: #a8cdd7 }
 .manual-bg-color2 { background-color: #808080 }
+.manual-title{
+	font-weight: 600;
+	text-align: center;
+	font-size: 1.25rem;
+}
 .manual-subtitle{
 	border-radius: 7px;
 	font-weight: 600;
@@ -2258,13 +2276,17 @@ sat31,33,40(titleの改行をどうするか。)修正
 	text-align: center;
 	padding: 0.25rem;
 }
+
 .manual{
 	min-height: calc(100% - 2.7rem;);
 	width: 100%;
 }
+
+
 .manual-content{
 	height: auto;
 }
+
 .manual-accordion-toggle {
 	background-image: url(../img/manual/manual_arrow_under.png);
 	background-repeat: no-repeat;
@@ -2274,9 +2296,11 @@ sat31,33,40(titleの改行をどうするか。)修正
 	cursor: pointer;
 	padding: 0.75rem 1.5rem;
 }
+
 .manual-accordion-toggle-target{
 	display: none;
 }
+
 .manual-ballon{
 	position: relative;
 	border-radius: 20px;
@@ -2284,6 +2308,7 @@ sat31,33,40(titleの改行をどうするか。)修正
 	border: 1px solid #a8cdd7;
 	padding: 20px;
 }
+
 .manual-ballon:after{
 	border: 12px solid transparent;
 	border-right: 12px solid #a8cdd7;
@@ -2292,9 +2317,12 @@ sat31,33,40(titleの改行をどうするか。)修正
 	top: 20px;
 	left: -24px;
 }
+
 .manual-accordion-toggle-target p{
 	line-height: 1.5rem;
+	font-size: 1.25rem;
 }
+
 .manual-image-try img{
 	width: 200px;
 }
